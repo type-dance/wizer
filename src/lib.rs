@@ -624,7 +624,7 @@ impl Wizer {
         config.wasm_simd(self.wasm_simd.unwrap_or(DEFAULT_WASM_SIMD));
 
         // Proposals that we should add support for.
-        config.wasm_reference_types(false);
+        config.wasm_reference_types(true);
         config.wasm_threads(false);
 
         Ok(config)
@@ -645,7 +645,7 @@ impl Wizer {
             multi_value: self.wasm_multi_value.unwrap_or(DEFAULT_WASM_MULTI_VALUE),
 
             // Proposals that we should add support for.
-            reference_types: false,
+            reference_types: true,
             simd: self.wasm_simd.unwrap_or(DEFAULT_WASM_SIMD),
             threads: false,
             tail_call: false,
